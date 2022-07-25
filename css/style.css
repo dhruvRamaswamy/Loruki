@@ -1,6 +1,67 @@
 /* Imports lato font */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
+/* Utility styles */
+
+ .container {
+    max-width: 1100px;
+    
+    /* This margin property sets the content here in the middle */
+    margin: 0 auto;
+    /* 'overflow' is how you deal with overflow in a container, but this also fixes the problem of margin on the top. You could also theoretically select it by the class of header and sent the margin of 0 */
+    overflow: auto;
+    padding: 0 40px;
+ }
+
+ /* Here we are sytling the card */
+ .card {
+    background-color: white;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+    padding: 20px;
+    margin: 10px;
+ }
+
+ /* Styling the buttons */
+ .btn {
+    display: border-box;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: var(--main-background--color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    border: none;
+    transition: color 0.5s, border 0.5s, background-color 0.5s;
+
+ }
+
+ .btn:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+ }
+
+ .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+ }
+
+.grid {
+    display: grid;
+    /* This divides the column spaces as '1fr 1fr' */
+    grid-template-columns: repeat(2, 1fr);
+    /* Sets the space between items */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    /* Unless you add the height, it won't actually apply the justify/align because the container doesn't have a height. Its container does, but not itself. height 100% would work as well*/
+    height: inherit;
+}
+
 *, *::after, *::before {
     box-sizing: border-box;
     margin: 0;
@@ -33,16 +94,18 @@ a {
  h1, h2 {
     font-weight: 300;
     line-height: 1.2;
-    margin: 10px 0;
  }
 
  p {
-    margin: 10px 0;
+    margin: 20px 0;
  }
 
  img {
     width: 100%;
  }
+
+/* STYLES START!!! */
+ /* Navbar styles */
 
  .navbar {
     background-color: var(--main-background--color);
@@ -66,22 +129,98 @@ a {
     padding: 10px;
     margin: 0;
 }
- .container {
-    max-width: 1100px;
-    
-    /* This margin property sets the content here in the middle */
-    margin: 0 auto;
-    /* 'overflow' is how you deal with overflow in a container, but this also fixes the problem of margin on the top. You could also theoretically select it by the class of header and sent the margin of 0 */
-    overflow: auto;
-    padding: 0 40px;
- }
 
 
- .flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
+
+/* Showcase */
 
 
- }
+.showcase {
+    height: 400px;
+    background-color: var(--main-background--color);
+    color: white;
+    position: relative;
+}
+
+.showcase .showcase-form {
+    /* If you set this relative you can push it down or move it around the website without affecting anything else*/
+    position: relative;
+    top: 60px;
+    height: 350px;
+    /* To change the overflow you change the property in the grid */
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+}
+
+.showcase h1 {
+    font-size: 40px; 
+}
+
+.showcase p {
+    margin: 40px 0;
+}
+
+
+.btn-request-demo-send {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font: var(--main-font);
+    transition-timing-function: ease;
+}
+
+#request-demo-headline {
+    text-align: center;
+}
+
+.showcase .grid {
+    overflow: visible;
+}
+
+/* Giving the forms some margin */
+.showcase-form .form-control {
+    margin: 30px 0;
+}
+
+/* Targeting the 3 inputs of the Request a demo section and styling those*/
+.showcase-form input[type='text'], .showcase-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #b4b3cb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+    font: var(--main-font);
+}
+
+/* To get rid of the border that happens when you select it use a pseudoselector */
+.showcase-form input:focus {
+    outline: none;
+}
+
+
+.btn-outline {
+    background-color: transparent; 
+    background: #2699D4;
+    transition-timing-function: ease;
+}
+
+.showcase-text {
+    text-align: center;    
+}
+
+.showcase::after {
+    /* When using ::before/::after you have to put a content property */
+    content: '';
+    position: absolute;
+    height: 105px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: white;
+    transform: skewY(-2deg);
+    -webkit-transform: skewY(-2deg);
+    -moz-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+}
