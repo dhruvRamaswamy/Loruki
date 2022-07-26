@@ -1,0 +1,199 @@
+/* Imports lato font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* Utility styles */
+
+ .container {
+    max-width: 1250px;
+    
+    /* This margin property sets the content here in the middle */
+    margin: 0 auto;
+    /* 'overflow' is how you deal with overflow in a container, but this also fixes the problem of margin on the top. You could also theoretically select it by the class of header and sent the margin of 0 */
+    overflow: auto;
+    padding: 0 40px;
+ }
+
+ /* Here we are sytling the card */
+ .card {
+    background-color: white;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+    padding: 20px;
+    margin: 10px;
+ }
+
+ /* Styling the buttons */
+ .btn {
+    display: border-box;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: var(--main-background--color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    border: none;
+    transition: color 0.5s, border 0.5s, background-color 0.5s;
+
+ }
+
+ .btn:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+ }
+
+ .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+ }
+
+.grid {
+    display: grid;
+    /* This divides the column spaces as '1fr 1fr' */
+    grid-template-columns: repeat(2, 1fr);
+    /* Sets the space between items */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    /* Unless you add the height, it won't actually apply the justify/align because the container doesn't have a height. Its container does, but not itself. height 100% would work as well*/
+    height: inherit;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.text-center {
+   /* You apply this class to every item you want to align in the center */
+   text-align: center;   
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    --main-font: 'Lato', sans-serif;
+    --main-color: #333;
+    --main-background--color: #047aed
+}
+
+html {
+    font-family: var(--main-font); 
+    font-size: 16px;
+    color: var(--main-color);
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color)
+}
+ h1, h2 {
+    font-weight: 300;
+    line-height: 1.2;
+ }
+
+ p {
+    margin: 20px 0;
+ }
+
+ img {
+    width: 100%;
+ }
+
+ /* Margin */
+
+ /* The idea of these classes is that whenever you want to add margin you can use these classes */
+ .my-1 {
+   margin: 1rem 0;
+ }
+ 
+ .my-2 {
+   margin: 1.5rem 0;
+ }
+ 
+ .my-3 {
+   margin: 2rem 0;
+ }
+ 
+ .my-4 {
+   margin: 3rem 0;
+ }
+
+ .my-5 {
+   margin: 4rem 0;
+ }
+
+ .m-1 {
+   margin: 1rem;
+ }
+ 
+ .m-2 {
+   margin: 1.5rem;
+ }
+ 
+ .m-3 {
+   margin: 2rem;
+ }
+ 
+ .m-4 {
+   margin: 3rem;
+ }
+
+ .m-5 {
+   margin: 4rem;
+ }
+
+ /* Padding */
+ 
+ .py-1 {
+   padding: 1rem 0;
+ }
+ 
+ .py-2 {
+   padding: 1.5rem 0;
+ }
+ 
+ .py-3 {
+   padding: 2rem 0;
+ }
+ 
+ .py-4 {
+   padding: 3rem 0;
+ }
+
+ .py-5 {
+   padding: 4rem 0;
+ }
+
+ .p-1 {
+   padding: 1rem;
+ }
+ 
+ .p-2 {
+   padding: 1.5rem;
+ }
+ 
+ .p-3 {
+   padding: 2rem;
+ }
+ 
+ .p-4 {
+   padding: 3rem;
+ }
+
+ .p-5 {
+   padding: 4rem;
+ }

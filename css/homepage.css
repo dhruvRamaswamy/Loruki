@@ -1,108 +1,4 @@
-/* Imports lato font */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-
-/* Utility styles */
-
- .container {
-    max-width: 1100px;
-    
-    /* This margin property sets the content here in the middle */
-    margin: 0 auto;
-    /* 'overflow' is how you deal with overflow in a container, but this also fixes the problem of margin on the top. You could also theoretically select it by the class of header and sent the margin of 0 */
-    overflow: auto;
-    padding: 0 40px;
- }
-
- /* Here we are sytling the card */
- .card {
-    background-color: white;
-    color: #333;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
-    padding: 20px;
-    margin: 10px;
- }
-
- /* Styling the buttons */
- .btn {
-    display: border-box;
-    padding: 10px 30px;
-    cursor: pointer;
-    background: var(--main-background--color);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    border: none;
-    transition: color 0.5s, border 0.5s, background-color 0.5s;
-
- }
-
- .btn:hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
- }
-
- .flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
- }
-
-.grid {
-    display: grid;
-    /* This divides the column spaces as '1fr 1fr' */
-    grid-template-columns: repeat(2, 1fr);
-    /* Sets the space between items */
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    /* Unless you add the height, it won't actually apply the justify/align because the container doesn't have a height. Its container does, but not itself. height 100% would work as well*/
-    height: inherit;
-}
-
-*, *::after, *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
-}
-
-:root {
-    --main-font: 'Lato', sans-serif;
-    --main-color: #333;
-    --main-background--color: #047aed
-}
-
-html {
-    font-family: var(--main-font); 
-    font-size: 16px;
-    color: var(--main-color);
-    scroll-behavior: smooth;
-    line-height: 1.6;
-}
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-    color: var(--main-color)
-}
- h1, h2 {
-    font-weight: 300;
-    line-height: 1.2;
- }
-
- p {
-    margin: 20px 0;
- }
-
- img {
-    width: 100%;
- }
+@import url("utilities.css");
 
 /* STYLES START!!! */
  /* Navbar styles */
@@ -223,4 +119,48 @@ a {
     -webkit-transform: skewY(-2deg);
     -moz-transform: skewY(-2deg);
     -ms-transform: skewY(-2deg);
+}
+
+/* Stats */
+
+.stats {
+    padding-top: 100px;
+}
+
+.stats-heading {
+    max-width: 550px;
+    /* This is how you center the heading in a situation like this where text align/justify content doesn't mean anything */
+    margin: auto;
+}
+
+.stats .container .grid-3 h3 {
+    font-size: 25px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.text-secondary {
+    margin-top: 5px;
+}
+
+/* CLI styles */
+
+.cli .grid {
+    height: 240px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+/* This selects the first child of the contanier, I was so confused */
+.cli .grid > *:first-child {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+/* This selects the second/third element of the cli-container. The reason why it is so confusing is because I copied the selectors from firefox */
+.cli-container > div:nth-child(2) > h3:nth-child(1), .cli-container > div:nth-child(3) {
+    text-align: center;
 }
