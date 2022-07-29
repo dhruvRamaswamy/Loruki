@@ -151,7 +151,7 @@
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
     overflow: hidden;
-    margin-bottom: 80px;
+    margin-bottom: 55px;
 }
 
 /* This selects the first child of the contanier, I was so confused */
@@ -164,3 +164,30 @@
 .cli-container > div:nth-child(2) > h3:nth-child(1), .cli-container > div:nth-child(3) {
     text-align: center;
 }
+
+/* Cloud styles */
+
+/* MY GOD THIS TOOK WAY LONGER THAT IT SHOULD HAVE */
+
+.cloud .grid {
+    grid-template-columns: 4fr 3fr;
+    background-color: var(--main-background--color);
+    
+    color: white;
+}
+
+/* This line of code took way too long to find out. This makes the background extend all the way */
+.cloud {
+    background-color: var(--main-background--color);
+}
+
+/* This centers the btn. The border is actualy the same color as the background so thats why the border exists */
+.cloud .btn {
+    display: block;
+    width: max-content;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid var(--dark-btn-color);
+ 
+}
+

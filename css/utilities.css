@@ -3,6 +3,13 @@
 
 /* Utility styles */
 
+:root {
+    --main-font: 'Lato', sans-serif;
+    --main-color: #333;
+    --main-background--color: #047aed;
+    --dark-btn-color: darkblue;
+}
+
  .container {
     max-width: 1250px;
     
@@ -43,6 +50,10 @@
     border: 1px solid black;
  }
 
+ .btn-dark {
+    background-color: var(--dark-btn-color);
+ }
+
  .flex {
     display: flex;
     align-items: center;
@@ -78,11 +89,7 @@
 
 }
 
-:root {
-    --main-font: 'Lato', sans-serif;
-    --main-color: #333;
-    --main-background--color: #047aed
-}
+
 
 html {
     font-family: var(--main-font); 
