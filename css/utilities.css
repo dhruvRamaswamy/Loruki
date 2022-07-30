@@ -7,7 +7,7 @@
     --main-font: 'Lato', sans-serif;
     --main-color: #333;
     --main-background--color: #047aed;
-    --dark-btn-color: darkblue;
+    --dark-btn-color: rgb(6, 13, 110);
 }
 
  .container {
@@ -120,6 +120,10 @@ a {
     width: 100%;
  }
 
+ .social a {
+    color: white
+ }
+
  /* Margin */
 
  /* The idea of these classes is that whenever you want to add margin you can use these classes */
@@ -206,10 +210,6 @@ a {
  }
  
  /* Text-size */
-
- .lead {
-    font-size: 20px;
- }
 
  .sm {
     font-size: 1rem;
