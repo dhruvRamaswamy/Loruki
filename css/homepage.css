@@ -229,11 +229,7 @@
         margin-top: 230px
     }
 
-    footer {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
+    
 
     .cli .grid {
         margin-bottom: 30px;
@@ -248,6 +244,8 @@
     .cloud {
         margin-top: 250px;
     }
+
+
 }
 
 @media(max-width: 590px){

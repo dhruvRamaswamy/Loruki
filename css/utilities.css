@@ -1,5 +1,5 @@
-/* Imports lato font */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+/* Imports lato font 300 and 400 */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
 /* Utility styles */
 
@@ -9,6 +9,7 @@
     --main-background--color: #047aed;
     --dark-btn-color: rgb(6, 13, 110);
     --hover-color: rgba(255, 255, 255, 0.5);
+    --light-gray: rgb(230, 230, 230);
 }
 
  .container {
@@ -279,14 +280,14 @@ footer, .footer a {
 }
 
 /* Mobile */
-@media(max-width: 600px){
+@media(max-width: 590px){
   .navbar {
       height: 125px;
-      
   }
 
   .navbar .flex {
       flex-direction: column;
+      overflow: hidden;
   }
 
   .navbar h1 {
@@ -303,3 +304,19 @@ footer, .footer a {
       padding-right: 15px;
   }
 }
+
+@media(max-width: 859px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .grid {
+    
+      grid-template-columns: 1fr !important;
+      grid-template-rows: 1fr !important;
+
+  }
+}
+
