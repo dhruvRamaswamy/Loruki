@@ -1,1 +1,113 @@
 @import url("utilities.css");
+
+/* Docs-head */
+
+.docs-head {
+    background-color: var(--main-background--color);
+}
+
+.docs-head .container {
+    color: white;
+    padding: 40px 50px;
+}
+
+.docs-head .container img {
+    width: 200px;
+    /* In order to align a specific item in a grid/flexbox use justify-self instead of justify content */
+    justify-self: flex-end;
+}
+
+/* Docs-main */
+
+.docs-main .container {
+    padding: 30px;
+}
+
+
+
+.navbar-docs {
+    /* Resets the padding to make it even */
+    padding-top: 0;
+    background-color: var(--light-gray);
+}
+
+.navbar-docs > h3:nth-child(3), .navbar-docs > h3:nth-child(1) {
+    margin: 30px 0;
+}
+
+.docs-main a:hover {
+    font-weight: bold;
+}
+
+.docs-main .introduction {
+    padding: 40px
+}
+
+.docs-main .introduction h3 {
+    margin: 25px 0;
+}
+
+.docs-main .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.docs-main nav li {
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    /* Just saying #ccc is a light grey color */
+    border-bottom: 1px #ccc solid;
+}
+
+.docs-main .introduction > h2{
+    font-size: 32px;
+}
+
+.docs-main .alert-success {
+    background-color: var(--medium-green);
+    color: white;
+    margin: 30px 0px;
+}
+
+.docs-main .alert p {
+    margin: 0;
+    margin-left: 10px
+}
+
+.docs-main .introduction > a {
+    margin: 200px 0;
+}
+
+/* I had to wrap the button in a div to make the margin on top work. FML */
+#install-cli-btn {
+    margin-top: 40px;
+}
+
+#install-cli-btn a:hover {
+    font-weight: normal;
+}
+
+.docs-main .introduction pre code {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    display: block;
+}
+
+@media(max-width: 859px){
+    .docs-head .container, .docs-main .container {
+        text-align: center;
+    }
+
+    .docs-head .container img {
+        justify-self: center;
+    }
+
+    .docs-main .container code {
+        text-align: left;
+    }
+}
+
+
+

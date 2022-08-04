@@ -252,7 +252,49 @@
     .cloud {
         margin-top: 150px;
     }
+    
+    .showcase .container .showcase-text {
+        padding: 10px
+    }
+
+
+    .container {
+        width: 100%;
+        padding: 10px;
+
+    }
+
+    /* I had to have this stupid complex selector because the previous on wasn't specific enough */
+    body > section.showcase > div > div.showcase-form.card {
+        width: 300px;
+        display: block;
+        top: 0px
+    }
 }
+
+@media(max-width: 379px) {
+    body > section.showcase > div > div.showcase-form.card {
+        width: 290px;
+        display: block;
+        top: 20px
+    }
+
+    .showcase::after {
+        display: none;
+    }
+
+    .stats .stats-heading {
+        margin-top: 300px !important;
+    }
+
+    
+
+
+    
+    
+
+}
+
 
 
 
